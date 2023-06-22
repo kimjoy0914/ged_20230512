@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>익명함수 복습 1</title>
+    <style>
+        body {
+            background-color: black;
+        }
+        div {
+            width: 250px;
+            height: 250px;
+            background-color: blanchedalmond;
+            margin-bottom: 4px;
+            border-radius: 4px;
+        }
+        .special {
+            background-color: lightsalmon;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div class="special"></div>
+    <div></div>
+    <div></div>
+    <script>
+        const special = document.querySelector('.special')
+        special.addEventListener('click',(event) => {
+            //현재 보이는 화면에서 좌표값 계산
+            console.log(`client:  ${event.clientX}, ${event.clientY}`)
+            //page화면의 맨 처음부터 y좌표
+            console.log(`page:  ${event.pageX}, ${event.pageY}`)
+        })
+    </script>
+</body>
+</html>

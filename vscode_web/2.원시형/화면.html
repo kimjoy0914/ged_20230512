@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 
+        defer를 쓰면  DOM tree가 완성될 때까지 지연해줌
+        그래서 먼저 호출하더라도 에러 없이 DOM(ul안에 li)에 접근이 가능하다 
+        브라우저 엔진 일하는  순서 -> DOM Tree -> CSS를 추가한 Render 
+     -->
+    <script defer src="./호이스팅.js"></script>
+</head>
+<body>
+    <ul>
+        <li>button1</li>
+        <li>button2</li>
+        <li>button3</li>
+    </ul>
+</body>
+</html>

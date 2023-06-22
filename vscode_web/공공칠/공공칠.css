@@ -1,0 +1,39 @@
+body {
+    background-color: black;/* 1 */
+}
+
+.line {
+    position: absolute;/* 2 */
+    background-color: white;/* 3 */
+}
+
+.horizontal {
+    width: 100%;/* 4 수평선이므로 폭을 꽉채움*/
+    height: 1px;/* 5 수평선이 흰색으로 보이게*/
+    top: 50%;/* 6 모니터 모서리(0,0) y 축을 의미*/
+}
+
+.vertical {
+    width: 1px;/* 7 */
+    height: 100%;/* 8 */
+    left: 50%;/* 9 */
+}
+
+/* target이미지를 배치하기 */
+.target {
+    position: absolute;/* 10 좌표값으로 배치할때 사용함 */
+    top: 50%;/* 11 y축좌표 */
+    left: 50%;/* 12 x축좌표 */
+    /* 아래코드가 있어야 이미지 중심이 옮겨짐 */
+    transform: translate(-50%, -50%);/* 13:이미지태그의 절반크기만큼 이동함 */
+}
+
+/* 좌표값 위치 잡아보기 */
+.tag {
+    color: white;
+    top: 50%;
+    left: 50%;
+    font-size: 30px;
+    position: absolute;
+    transform: translate(20px, 20px);
+}

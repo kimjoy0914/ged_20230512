@@ -1,0 +1,93 @@
+* {
+  /* 
+    우리가 패딩을 줬을 때 높이와 너비가 그 패딩을 포함했을 때도
+    동일한 높이와 너비가 되도록 border-box로 준다
+    */
+  box-sizing: border-box; /* 1 */
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: 0; /* 2 외부 여백을 0으로 */
+  cursor: default;
+}
+
+a {
+  text-decoration: none; /* 3  a태그 밑줄제거 */
+  color: #eae7b1; /* 4 글자색 변경 */
+}
+
+ul {
+  list-style: none; /* 5 li태그 구슬 제거 */
+  padding-left: 0; /* 6 */
+}
+/* 선택자가 id이면 #을 붙임 */
+/* Navbar 
+  navbar는 ID선택자로 되어 있기 때문에  navbar에게 야 너 안에 박스 두 개 있는데 
+  우리 플렉스 박스로 하자 그래서 박스가 양쪽에 나올 수 있도록 
+  그리고 지금 중심 축은 수평 축이죠 중심축에서 정렬할 수 있는 것은 justify-content니까
+  space-between을 이용해서 간격이 떨어져 있도록 만든다
+*/
+#navbar {
+  position: fixed; /* 13 */
+  width: 100%; /* 12 */
+  align-items: center; /* 10 */
+  display: flex; /* 7 */
+  padding: 16px; /* 11 */
+  justify-content: space-between; /* 9 */
+  background-color: #3c6255; /* 8 */
+  color: #eae7b1; /* 8-1 */
+}
+
+.navbar-logo {
+  font-size: 28px; /* 14 */
+  font-weight: 600; /* 15 */
+}
+
+.navbar-menu {
+  display: flex; /* 16 li 가로정렬하기 */
+}
+
+.navbar-menu-item {
+  padding: 8px 12px; /* 20 내부여백 */
+  margin: 0 4px; /* 19 외부여백 */
+  cursor: pointer; /* 17 커서손모양 */
+  border-radius: 4px; /* 18 */
+}
+
+.navbar-menu-item.active {
+  border: 1px solid #eae7b1;
+}
+
+.navbar-menu-item:hover {
+  background-color: #eae7b1; /* 19 */
+  color: #3c6255; /* 20 */
+}
+
+/* Section common */
+section {
+  width: 1200px;
+  height: 700px;
+  padding: 50px;
+  text-align: center;
+  margin: auto;
+}
+
+#intro {
+  background-color: #eae7b1;
+}
+#about {
+  background-color: #8ac6fe;
+}
+#skills {
+  background-color: #ed8afe;
+}
+#work {
+  background-color: #fe8a8a;
+}
+#testimonials {
+  background-color: #8afe9b;
+}
+#contact {
+  background-color: #f0fe8a;
+}

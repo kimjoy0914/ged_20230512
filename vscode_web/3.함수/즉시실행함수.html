@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>즉시실행함수</title>
+</head>
+<body>
+    <script>
+        (function(x){
+            //브라우저에 문자열을 쓴다- 브라우저가 해석한다-태그는 빼고 내용만 보여줌
+            document.write('즉시실행함수 : '+x)
+        })(100)
+    </script>
+</body>
+</html>
+<!-- 
+    즉시실행함수는 호이스팅 이슈를 해결해줌
+    원치않는 공간으로 그 값이 빠져나가지 못하게 할 때도 사용가능함
+    괄호가 2개다
+    첫째는 함수의 정의 부분이다
+    두번째는 함수를 호출하는 부분이다
+
+ -->
